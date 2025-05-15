@@ -3,7 +3,7 @@
 ## Encrypt
 
 1. Instala **`openssl`**
-  - Comprueba que está bien instalado `openssl version`.
+   - Comprueba que está bien instalado `openssl version`.
 3. Crea el archivo `sessionXX.pass` en la carpeta `./keys`, con la contraseña.
 4. Actualiza la variable `END` en el archivo `./setup-enc-filters.sh` al número actual de sesiones.
 5. Ejecuta `./setup-enc-filters.sh`
