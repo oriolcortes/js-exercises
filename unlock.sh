@@ -18,6 +18,6 @@ echo "$PASSWORD" > ".keys/session${SESSION_NUM}.pass"
 chmod 600 ".keys/session${SESSION_NUM}.pass"
 
 # Realizar re-checkout para que Git ejecute el filtro smudge y descifre
-git checkout .
+git reset --hard && git checkout --force .
 
 echo "La contraseña para la sesión ${SESSION_NUM} se ha configurado correctamente y se ha ejecutado el re-checkout."
