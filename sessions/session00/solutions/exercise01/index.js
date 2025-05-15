@@ -1,4 +1,4 @@
-// Guarda la información de la canción en constiables primitivas
+// Guarda la información de la canción en constantes primitivas
 const titulo = 'Tu Canción Favorita';
 const autor = 'Nombre del Artista';
 const duracionEnSegundos = 245; // Duración en segundos
