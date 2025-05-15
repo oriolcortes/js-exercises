@@ -16,6 +16,7 @@ Ejecuta los siguientes comandos:
 
 1. `git clone https://github.com/oriolcortes/js-exercises.git`
 2. `cd js-exercises`
-3. `chmod +x ./unlock.sh`
-4. `./unlock.sh <número_de_sesión_en_dos_dígitos> <contraseña>`
+3. `./setup-enc-filters.sh`
+4. `chmod +x ./unlock.sh`
+5. `./unlock.sh <número_de_sesión_en_dos_dígitos> <contraseña>`
    - Por ejemplo, session00: `./unlock.sh 00 "Lince-Gris-47"`
