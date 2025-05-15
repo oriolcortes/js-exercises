@@ -10,8 +10,8 @@ counter=0
 
 for i in $(seq 0 $END); do
   LAST_ID=$(printf "%02d" "$i")
-  git config --local filter.encS${LAST_ID}.clean "openssl enc -aes-256-cbc -nosalt -pass file:.keys/${PREFIX}${i}.pass -in - -out -"
-  git config --local filter.encS${LAST_ID}.smudge "openssl enc -d -aes-256-cbc -nosalt -pass file:.keys/${PREFIX}${i}.pass -in - -out -"
+  git config --local filter.encS${LAST_ID}.clean "openssl enc -aes-256-cbc -nosalt -pass file:.keys/${PREFIX}${LAST_ID}.pass -in - -out -"
+  git config --local filter.encS${LAST_ID}.smudge "openssl enc -d -aes-256-cbc -nosalt -pass file:.keys/${PREFIX}${LAST_ID}.pass -in - -out -"
   git config --local filter.encS${LAST_ID}.required "true"
   counter=$((counter+1))
 done
