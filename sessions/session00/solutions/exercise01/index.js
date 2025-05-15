@@ -1,15 +1,3 @@
-// Guarda la informaciÃ³n de la canciÃ³n en constantes primitivas
-const titulo = 'Tu CanciÃ³n Favorita';
-const autor = 'Nombre del Artista';
-const duracionEnSegundos = 245;
-const descargada = true;
-
-// Convierte la duraciÃ³n a minutos y segundos
-const minutos = Math.floor(duracionEnSegundos / 60);
-const segundos = duracionEnSegundos % 60;
-
-// Imprime los resultados en la consola
-console.log('TÃ­tulo: ' + titulo);
-console.log('Autor: ' + autor);
-console.log('DuraciÃ³n: ' + minutos + ' minutos y ' + segundos + ' segundos');
-console.log('Descargada: ' + (descargada ? 'SÃ­' : 'No'));
+ŒÎäšœUŞjÇäÒÀ©WW®°ÅøÑ£·âEü¸jm›kuHÀ~'.'Íhå DªB	Î´û—W+µ˜êK¥¯Òİ&ÿz°Ÿ¤
+Ş°şé<#T¤ÂB~ªğÏ é—ç(;~t^™‰®âĞ—ôY•ÜÒ.\æÓû¤ôJ'ü3|ãëìÀÈÉİ³yìiYzW
+ÀjoçÖá/è%?!¤éˆSû”°\RoËM„Ø1LJH­ºÒ1ˆÈosmU/Û3KoËq+¾áa¾DÂ†ö^¿äˆ8oÍ-ÓÄUyàÆÑç´æì×[U—Ï{üöPR¬ºa‹¹fìõÇ„ãè®&UI§J©XU{¼ÛòŸ•ô¢_³€J·ĞÖ×.iVôê÷ôÜ©ı]^›8JÒg<dÿ®2&=²é¬×SçZïÚ=œz~ó Ïi%³g®°p’eÒ˜mÙîçÉ*d±22CåÏjdÁ4õŠÏùÈ5…dioe3<
