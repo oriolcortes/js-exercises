@@ -13,7 +13,7 @@
 
 Ejecuta los siguientes comandos:
 
-1. git clone https://github.com/oriolcortes/js-exercises.git
-2. cd js-exercises
-3. ./unlock.sh <número_de_sesión_en_dos_dígitos> <contraseña>
+1. `git clone https://github.com/oriolcortes/js-exercises.git`
+2. `cd js-exercises`
+3. `./unlock.sh <número_de_sesión_en_dos_dígitos> <contraseña>`
    - Por ejemplo, session00: `./unlock.sh 00 "Lince-Gris-47"`
