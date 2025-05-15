@@ -18,10 +18,10 @@ chmod 600 "$KEY"
 # 1  Quitar skip-worktree de todos los archivos de la sesión
 git ls-files -z "$DIR" | xargs -0 git update-index --no-skip-worktree --
 
-# 2  Elimínalos del árbol de trabajo para que Git los vuelva a descargar.
+# 2  Eliminarlos del árbol de trabajo para que Git los vuelva a descargar.
 git ls-files -z "$DIR" | xargs -0 rm -f --
 
-# 3  Restaura desde el índice ⇒ Git aplica el smudge (desencripta).
+# 3  Restaurar desde el índice ⇒ Git aplica el smudge (desencripta).
 git checkout -- "$DIR"
 
-echo "Sesión $S descifrada — ficheros en texto claro."
+echo "Sesión $S descifrada."
