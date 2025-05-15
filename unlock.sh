@@ -1,23 +1,27 @@
-#!/bin/bash
+#!/usr/bin/env bash
 set -euo pipefail
 
 if [ "$#" -ne 2 ]; then
-  echo "Uso: $0 <número_sesión (ej: 01)> <contraseña>"
+  echo "Ús: $0 <sesión (00..06)> <contraseña>" >&2
   exit 1
 fi
 
-# Aseguramos que el número de sesión tenga 2 dígitos
-SESSION_NUM=$(printf "%02d" "$1")
-PASSWORD="$2"
+S=$(printf "%02d" "$1")
+PASS="$2"
+KEY=".keys/session${S}.pass"
+DIR="sessions/session${S}/solutions"
 
-# Crear la carpeta .keys si no existe
 mkdir -p .keys
+echo "$PASS" > "$KEY"
+chmod 600 "$KEY"
 
-# Crear el archivo de clave para la sesión indicada
-echo "$PASSWORD" > ".keys/session${SESSION_NUM}.pass"
-chmod 600 ".keys/session${SESSION_NUM}.pass"
+# 1  Quitar skip-worktree de todos los archivos de la sesión
+git ls-files -z "$DIR" | xargs -0 git update-index --no-skip-worktree --
 
-# Realizar re-checkout para que Git ejecute el filtro smudge y descifre
-git reset --hard && git checkout --force .
+# 2  Elimínalos del árbol de trabajo para que Git los vuelva a descargar.
+git ls-files -z "$DIR" | xargs -0 rm -f --
 
-echo "La contraseña para la sesión ${SESSION_NUM} se ha configurado correctamente y se ha ejecutado el re-checkout."
+# 3  Restaura desde el índice ⇒ Git aplica el smudge (desencripta).
+git checkout -- "$DIR"
+
+echo "Sesión $S descifrada — ficheros en texto claro."
