@@ -2,12 +2,13 @@
 
 ## Encrypt
 
-1. Instala **`gnupg`**
-2. Crea el archivo `sessionXX.pass` en la carpeta `./keys`, con la contraseña.
-3. Actualiza la variable `END` en el archivo `./setup-gpg-filters.sh` al número actual de sesiones.
-4. Ejecuta `./setup-gpg-filters.sh`
-5. Escribe la solución en el directorio `./sessions/sessionXX/solutions/exerciseXX/`.
-6. Ejecuta `git add` para añadir los archivos (El cifrado se ejecuta cuando se ejecuta `git add solutionFiles`).
+1. Instala **`openssl`**
+  - Comprueba que está bien instalado `openssl version`.
+3. Crea el archivo `sessionXX.pass` en la carpeta `./keys`, con la contraseña.
+4. Actualiza la variable `END` en el archivo `./setup-enc-filters.sh` al número actual de sesiones.
+5. Ejecuta `./setup-enc-filters.sh`
+6. Escribe la solución en el directorio `./sessions/sessionXX/solutions/exerciseXX/`.
+7. Ejecuta `git add` para añadir los archivos (El cifrado se ejecuta cuando se ejecuta `git add solutionFiles`).
 
 ## Decrypt
 
