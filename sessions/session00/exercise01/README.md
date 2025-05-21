@@ -31,18 +31,13 @@ Descargada: Sí / No
 >
 > para declarar e inicializar una variable en JavaScript.
 >
-> - **Variables Primitivas**
->   Almacena diferentes tipos de datos:
+> - **Variables Primitivas:** Almacena diferentes tipos de datos:
+>   - Texto: "Tu Canción Favorita"
+>   - Número: 245 (por ejemplo, para la duración en segundos)
+>   - Booleano: true o false para indicar si la canción está descargada
 >
-> - Texto: "Tu Canción Favorita"
-> - Número: 245 (por ejemplo, para la duración en segundos)
-> - Booleano: true o false para indicar si la canción está descargada
+> - **Operadores Matemáticos:** Para convertir segundos a minutos y segundos:
+>   - Usa Math.floor() para obtener los minutos completos.
+>   - Usa el operador % para calcular los segundos sobrantes (resto de la división).
 >
-> - **Operadores Matemáticos**
->   Para convertir segundos a minutos y segundos:
->
-> - Usa Math.floor() para obtener los minutos completos.
-> - Usa el operador % para calcular los segundos sobrantes (resto de la división).
->
-> - **Salida en Consola**
->   Emplea console.log() para mostrar los resultados en la consola y verificar los cálculos realizados.
+> - **Salida en Consola:** Emplea console.log() para mostrar los resultados en la consola y verificar los cálculos realizados.
